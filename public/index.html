@@ -5,6 +5,7 @@
     <script type="text/javascript">
     function bexioOAuth(clientID, clientSecret) {
         // Set the configuration settings
+        console.log('Setting up credentials');
         const credentials = {
             client: {
             id: clientID,
@@ -53,14 +54,14 @@
     </script>            
 </head>
 <body>
-    <form action="bexioOAuth(client_id.value, client_secret.value)">
+    <form name="bexio oAuth">
         Client ID:<br>
         <input type="text" name="client_id" id="client_id" >
         <br>
         Client Secret:<br>
         <input type="text" name="client_secret" id="client_secret">
         <br><br>
-        <input type="submit">
+        <input name="submit" type="submit" value="Get Access Token" onclick="bexioOAuth(client_id.value, client_secret.value)">
     </form>
 
 </body>
